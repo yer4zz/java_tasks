@@ -1,0 +1,401 @@
+http://localhost:8080/
+
+
+
+День 1
+
+Методы и рекурсия
+
+[модификаторы] <тип возвращаемого значения> <название_метода> ([<параметры>]){
+    <тело метода>
+}
+МОДИФИКАТОРЫ (не обязательно):
+public class
+Применение: Используется для классов, методов и полей.
+Описание: Позволяет доступ из любого другого класса.
+private
+Применение: Используется для полей и методов.
+Описание: Позволяет доступ только внутри того же класса.
+protected
+Применение: Используется для полей и методов.
+Описание: Позволяет доступ в пределах пакета и в классах-наследниках.
+default (пакетный доступ, когда модификатор не указан)
+Применение: Используется для классов, полей и методов.
+Описание: Позволяет доступ в пределах того же пакета.
+static
+Применение: Используется для методов и полей.
+Описание: Принадлежит классу, а не экземпляру. Можно обращаться напрямую через имя класса.
+final
+Применение: Используется для классов, методов и полей.
+Описание:
+Класс: Не может быть наследован.
+Метод: Не может быть переопределен в подклассе.
+Поле: Значение не может быть изменено после присвоения.
+
+ТИП ВОЗВРАЩАЕМОГО ОБЪЕКТА:
+
+пример:
+public void printFullName() {
+    System.out.println("Иванов Дмитрий Висильевич");
+}
+
+
+Цикл "for-each" проходит по каждому элементу массива array. 
+for (int num : array) {
+    sum += num;
+}
+
+
+День 2
+
+Конструктор, Пакет (Package)
+
+import java.util.Scanner;
+//import java.util.Arrays;
+//import java.util.ArrayList;
+//import java.util.List;
+//import java.util.*;
+
+public class Main {
+    public static int[] numbers = {1, 2, 3, 4, 5};
+    public static int[][] Matrix = new int[3][3];
+
+    public static void main(String[] args) {
+        for (int i = 0; i < Matrix.length; i++) {
+            for (int j = 0; j < Matrix[i].length; j++) {
+                Matrix[i][j] = j;
+            }
+        }
+//        sumMass();
+//        minMaxMass(numbers);
+    }
+
+    public static void sumMass() {
+        int[] array = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for (int i : array) {
+            sum += i;
+        }
+        System.out.println(sum);
+    }
+
+    public static void minMaxMass(int[] nums) {
+        int min = nums[0];
+        int max = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+
+            if (nums[i] < min) {
+                min = nums[i];
+            }
+            else if (nums[i] > max) {
+                max = nums[i];
+            }
+        }
+        System.out.println(min + " " + max);
+    }
+}
+
+
+День 3
+
+Метод .add() используется для добавления элемента в список (List) в Java. 
+Этот метод добавляет указанный элемент в конец списка. 
+
+День 4
+
+Enterprise: тяжелые серверные приложения для банков, корпораций, инвестфондов и т.д.
+Mobile: мобильная разработка (телефоны, планшеты), благодаря Android.
+Web: лидирует PHP, но и Java держит солидный кусок рынка.
+Big Data: распределенные вычисления в кластерах из тысяч серверов.
+Smart Devices: программы для умного дома, электроники, холодильников с выходом в интернет.
+
+import java.util.Scanner;
+
+public class Test {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double x = sc.nextInt();
+        double result = div(diff(sum(mult(mult(x, x), x), mult(7, x)), 2), sum(x, 12));
+        String stringResult = String.format("%.3f", result);    // перевод и округление до 3 знака
+        System.out.println(stringResult);
+
+    }
+
+    public static double sum(double a, double b) {
+        return a + b;
+    }
+
+    public static double diff(double a, double b) {
+        return a - b;
+    }
+
+    public static double mult(double a, double b) {
+        return a * b;
+    }
+
+    public static double div(double a, double b) {
+        return a / b;
+    }
+
+}
+
+
+День 5
+
+
+Переход с 10 на 11 винду, откат на 10 винду
+
+
+java.util.Collection: - List, - Set;
+
+List - список, все имеют один тип, могут дублироваться, имеют порядок добавления элементов
+
+ArrayList - может принимать неограниченное кол-во переменных и работать с ними
+но не оптимизирован, по возможности использовать одномерные и двумерные массивы
+
+LinkedList - такой же как и ArrayList, но используется когда часто нужно что-то добавляет или удалять
+тут все элементы связываются друг с другом
+
+.add - добавляет переменную; .remove - удаляет переменную по индеклу; .clear - очищает весь лист;
+.size() - размер листа (кол-во эелементов); .get(индекс , другой элемент) - заменяет элемент
+
+
+День 6
+
+
+Set - набор, хранит в себе мапу
+
+HashSet<>() - быстро находит элементы в мапе, не допускает дублей и не сохраняет порядок добавления элементов
+
+LinkedHashSet<>() - сохраняет порядок добавления
+
+TreeSet<>(); - сортирует в алфавитном порядке
+
+
+Map - словарь, содержит Ключ и его Значение
+
+HashMap<>() - не сохраняет порядок элементов, но быстрый, не допускает дублей и не сохраняет порядок добавления элементов
+
+LinkedHashSet<>() - сохраняет порядок добавления
+
+TreeSet<>(); - сортирует элементы в порядке Ключа
+
+.put - добавляет элементы и присваивает последнее значение ключа(если ключ повторяется); 
+.putIfAbsent - присваивает начальное значение ключа (если ключ повторяется)
+
+
+День 7
+
+
+@Override - особые указания для кампилятора, что делать с кодом (переопределение)
+
+ООП:
+
+НАСЛЕДОВАТЕЛЬНОСТЬ - создание нового класса на базе старого.
+Публикуется* родительский класс, в нём публикуются* характеристики и по ним генерируется* конструктор ( this. )
+Публикуется* класс "Сын" + extends + "Родитель" =) публикуется* сын (int + характеристики) { super (характеристики) }
+Дальше в Main: Сын + имя = new Сын (характеристики)
+// Базовый класс (родитель)
+class Animal {
+    String name;
+
+    public void eat() {
+        System.out.println(name + " is eating");
+    }
+}
+
+// Подкласс (наследник)
+class Dog extends Animal {
+    public void bark() {
+        System.out.println(name + " is barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.name = "Buddy";
+        dog.eat();  // Наследованный метод
+        dog.bark(); // Метод класса Dog
+    }
+}
+
+ИНКАПСУЛЯЦИЯ - скрывает внутренние детали работы объекта и предоставляет 
+доступ к этим деталям только через специально определенные методы
+
+Представьте себе классический пример с коробкой:
+1 Коробка: У вас есть коробка (объект), и вы хотите что-то положить в нее или взять из нее что-то.
+2 Закрытая коробка: Коробка закрыта, и вы не можете напрямую залезть внутрь (это скрытие данных).
+3 Специальные отверстия: В коробке есть специальные отверстия (методы), через которые вы можете класть вещи внутрь и доставать их (доступ к данным через методы)
+
+class Box {
+    // Приватное поле, скрытое от внешнего мира
+    private String content;
+
+    // Публичный метод для установки значения
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    // Публичный метод для получения значения
+    public String getContent() {
+        return content;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Box box = new Box();
+
+        // Используем методы для взаимодействия с содержимым коробки
+        box.setContent("Secret message");
+        System.out.println(box.getContent());
+    }
+}
+
+ПОЛИСОРФИЗМ - позволяет использовать один интерфейс для разных типов данных.
+(Допустим у нас есть два класса, один для ввода целых чисел - Integer, а другой для ввода чисел с плавающей точкой - Double.
+Когда мы в консоль вводим целое число, за работу принимается класс Integer, а когда вводим числа с плавающей точкой - работает Double)
+import java.util.Scanner;
+
+// Базовый класс NumberInput
+abstract class NumberInput {
+    // Абстрактный метод для обработки ввода
+    public abstract void processInput(String input);
+}
+
+// Класс для обработки целых чисел
+class IntegerInput extends NumberInput {
+    @Override
+    public void processInput(String input) {
+        try {
+            int value = Integer.parseInt(input);
+            System.out.println("Вы ввели целое число: " + value);
+        } catch (NumberFormatException e) {
+            System.out.println("Ошибка: введено не целое число");
+        }
+    }
+}
+
+// Класс для обработки чисел с плавающей точкой
+class DoubleInput extends NumberInput {
+    @Override
+    public void processInput(String input) {
+        try {
+            double value = Double.parseDouble(input);
+            System.out.println("Вы ввели число с плавающей точкой: " + value);
+        } catch (NumberFormatException e) {
+            System.out.println("Ошибка: введено не число с плавающей точкой");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите число:");
+        String input = sc.nextLine();
+
+        NumberInput numberInput;
+        if (input.contains(".")) {
+            numberInput = new DoubleInput();  // Если ввод содержит точку, считаем его числом с плавающей точкой
+        } else {
+            numberInput = new IntegerInput();  // Иначе считаем его целым числом
+        }
+
+        numberInput.processInput(input);  // Используем полиморфизм для обработки ввода
+    }
+}
+
+АБСТРАКТНЫЙ КЛАСС - это класс, который не может быть инстанцирован напрямую и может содержать абстрактные методы, 
+которые должны быть реализованы в подклассах. Абстрактный класс используется, когда вы хотите предоставить 
+базовую функциональность для всех подклассов, но некоторые методы должны быть конкретно реализованы в подклассах.
+
+Класс, который содержит хотя бы один нереализованный метод
+Для определения такого класса используется ключевое слово abstract
+От абстрактных классов нельзя создавать объекты
+Абстрактные классы могут содержать и обычные методы и переменные
+
+// Абстрактный класс Shape (Форма)
+abstract class Shape {
+    // Абстрактный метод для вычисления площади
+    public abstract double area();
+
+    // Обычный метод для отображения информации о форме
+    public void display() {
+        System.out.println("This is a shape.");
+    }
+}
+
+// Класс Circle (Круг), который наследует Shape
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Реализация абстрактного метода area для круга
+    @Override
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Класс Rectangle (Прямоугольник), который наследует Shape
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    // Реализация абстрактного метода area для прямоугольника
+    @Override
+    public double area() {
+        return width * height;
+    }
+}
+
+// Основной класс для демонстрации работы
+public class Main {
+    public static void main(String[] args) {
+        // Создаем объекты Circle и Rectangle
+        Shape circle = new Circle(5.0);
+        Shape rectangle = new Rectangle(4.0, 6.0);
+
+        // Вызываем методы для объектов
+        System.out.println("Площадь круга: " + circle.area());
+        System.out.println("Площадь прямоугольника: " + rectangle.area());
+
+        // Вызываем обычный метод display
+        circle.display();
+        rectangle.display();
+    }
+}
+
+
+День 8
+
+
+мне нужно разобраться с тем, что я загрузил в xml, понять как этим пользоваться, работать с этим, тэстить 
+
+MVC -- model-view-controller -- модели-шаблоны-контроллеры
+
+НАЧАТ ПРОЕКТ
+Уроки Java Spring Boot / #1
+Уроки Java Spring Boot / #2
+
+
+День 9
+
+
+ПРОДОЛЖЕНИЕ ПРОЕКТА
+Уроки Java Spring Boot / #3
+
+@GetMapping - для отслежки url-адресов
+
+th:insert="" - позволяет всторить определенный фрагмент, "название где находится / как называется :: как назван в фрагменте"
+jdbc - позволяет соединять проект с базой данных
