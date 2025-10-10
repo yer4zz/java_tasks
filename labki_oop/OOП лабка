@@ -1,0 +1,53 @@
+1. Создание класса
+Напишите свой класс, который описывает любой объект из реальной жизни (например, "Книга", "Машина", "Телефон"). Определите несколько свойств для этого класса. 2. Что такое класс
+В своём классе добавьте комментарий, который объясняет он используется в ООП. 3. Объект класса
+Создайте объект вашего класса в методе Мain. Присвойте значения его свойствам.
+4. Работа с полями класса
+Напишите метод, который выводит значения всех полей вашего класса в консоль. Вызовите этот метод из Main. 
+5. Создайте объект, равный null, и попробуйте вызвать у него метод. Объясните, что произойдёт, и как избежать ошибки. 
+6. Создание метода
+В классе Student создайте метод, который рассчитывает средний балл студента на основе оценок.
+7. Работа с методами класса
+Добавьте метод, который выводит информацию о студенте (например, имя, возраст, средний балл) в консоль.
+8. Сравнение объектов
+Наишите метод, который сравнивает два объекта вашего класса. Метод должен возвращать true, если все их свойства равны, и false в противном случае.
+9. Модификаторы доступа
+Добавьте в ваш класс приватные и публичные поля. Объясните, зачем нужны модификаторы доступа и как они защищают данные.
+10. Работа с наследованием
+Создайте базовый класс, описывающий общие свойства и методы для группы объектов (например, "Животное"). Унаследуйте его для двух классов-наследников (например, "Кошка" и "Собака").
+
+
+
+2 https://www.canva.com/design/DAGc1L-XQcc/MPr6oPYK2KmEYGxitLX4zQ/edit?utm_content=DAGc1L-XQcc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+4 https://www.canva.com/design/DAGeU0U0FvU/nXYu8NMSsGm8Ow69afuLwg/edit?utm_content=DAGeU0U0FvU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+5 https://www.canva.com/design/DAGexmo98i0/AMPhBL7RBbmReJGFBuVL_g/edit?utm_content=DAGexmo98i0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+6 https://www.canva.com/design/DAGgXKjZaXI/NB12PWcR4X-dN-FJrMXx6w/edit?utm_content=DAGgXKjZaXI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+7 https://www.canva.com/design/DAG0pMbUTnc/QsMDH-dbb6PVVxI42pMofA/edit?utm_content=DAG0pMbUTnc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+8 https://www.canva.com/design/DAG0pRYWJSU/JGt_Ia1kr0bihWOlmNgUOw/edit
+
+9 https://www.canva.com/design/DAG0pe_Y7Ss/FT9mPC3zs8MLSYBPQ1hCag/edit?utm_content=DAG0pe_Y7Ss&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+10 https://www.canva.com/design/DAG0pZnqwH8/CUl6uaaTp-pkxws8fUBVZw/edit
+
+11 https://www.canva.com/design/DAG0pSohb8c/dla9jYG5DWDsI-fRdrHnDQ/edit
+
+12 https://www.canva.com/design/DAG0pTiBT1U/NwLwsKsPzmUPZSWECB02wQ/edit
+
+13 https://www.canva.com/design/DAG0pdk9zcM/lizuD-OBEm-_GNAbGyhP_w/edit
+
+14 https://www.canva.com/design/DAG0pczEsdc/Az_M_8JLwA2mSDg7IENapQ/edit
+
+15 https://www.canva.com/design/DAG0pbkuk-4/PJ0QvRzxan8dyFpwAl6cUw/edit
+
+16 https://www.canva.com/design/DAG0pZQXyB0/2rGrtj8e6aVEqgb4NqW7zw/edit
+
+17 https://www.canva.com/design/DAG0pWrHk70/ifhOzGkoBoPxq747USdBmA/edit
