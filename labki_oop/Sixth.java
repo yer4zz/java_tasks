@@ -1,21 +1,25 @@
 import java.util.List;
 import java.util.ArrayList;
 
+
+
 interface Drawable {
     void draw();
 }
 
 class Circle implements Drawable {
     public void draw() {
-        System.out.println("Drawing a circle");
+        System.out.println("circle");
     }
 }
 
 class Rectangle implements Drawable {
     public void draw() {
-        System.out.println("Drawing a rectangle");
+        System.out.println("rectangle");
     }
 }
+
+
 
 interface PaymentMethod {
     void pay(double amount);
@@ -23,15 +27,17 @@ interface PaymentMethod {
 
 class CreditCardPayment implements PaymentMethod {
     public void pay(double amount) {
-        System.out.println("Paid " + amount + " with credit card");
+        System.out.println("credit card" + amount);
     }
 }
 
 class PayPalPayment implements PaymentMethod {
     public void pay(double amount) {
-        System.out.println("Paid " + amount + " with PayPal");
+        System.out.println("pay pal" + amount);
     }
 }
+
+
 
 interface IterableCollection {
     MyIterator get_iterator();
@@ -66,9 +72,11 @@ class NumberCollection implements IterableCollection {
     }
 }
 
+
+
+
 public class Main {
     public static void main(String[] args) {
-        // Задание 1: Drawable
         Drawable d1 = new Circle();
         Drawable d2 = new Rectangle();
         d1.draw();
