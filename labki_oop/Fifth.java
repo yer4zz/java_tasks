@@ -1,5 +1,5 @@
 class Main {
-
+    
     static class Animal {
         public void sound() {
             System.out.println("звук");
@@ -17,9 +17,6 @@ class Main {
             System.out.println("мяу");
         }
     }
-
-
-
 
 
 
@@ -55,25 +52,25 @@ class Main {
 
 
 
-
-
 static class Vehicle {
         public void start() {
-            System.out.println("Транспорт заводится...");
+            System.out.println("транспорт");
         }
     }
 
     static class Car extends Vehicle {
         public void start() {
-            System.out.println("Машина завелась");
+            System.out.println("тачка");
         }
     }
 
     static class Bike extends Vehicle {
         public void start() {
-            System.out.println("Велосипед готов к езде");
+            System.out.println("вело");
         }
     }
+
+
 
     static abstract class Employee {
         public abstract double calculateSalary();
@@ -107,29 +104,27 @@ static class Vehicle {
 
 
 
-
-
-
-
     static abstract class Appliance {
         public abstract void turnOn();
     }
 
     static class WashingMachine extends Appliance {
         public void turnOn() {
-            System.out.println("Стиральная машина начала стирку");
+            System.out.println("стиралка");
         }
     }
 
     static class Refrigerator extends Appliance {
         public void turnOn() {
-            System.out.println("Холодильник начал охлаждение");
+            System.out.println("холодос");
         }
     }
 
+
+
     static class Publication {
         public void printDetails() {
-            System.out.println("Информация о публикации");
+            System.out.println("инфо");
         }
     }
 
@@ -143,9 +138,11 @@ static class Vehicle {
         }
 
         public void printDetails() {
-            System.out.println("Книга: " + title + ", автор: " + author);
+            System.out.println(title + author);
         }
     }
+
+
 
     static class Magazine extends Publication {
         String title;
@@ -157,7 +154,7 @@ static class Vehicle {
         }
 
         public void printDetails() {
-            System.out.println("Журнал: " + title + ", выпуск: " + issue);
+            System.out.println(title + issue);
         }
     }
 
@@ -171,7 +168,7 @@ static class Vehicle {
         }
 
         public void printDetails() {
-            System.out.println("Газета: " + name + ", дата: " + date);
+            System.out.println(name + date);
         }
     }
 
@@ -182,7 +179,6 @@ static class Vehicle {
 
         Animal a1 = new Dog();
         Animal a2 = new Cat();
-
         a1.sound();
         a2.sound();
 
@@ -190,35 +186,30 @@ static class Vehicle {
 
         Shape s1 = new Circle(3);
         Shape s2 = new Rectangle(4, 5);
-
         Shape[] shapes = {s1, s2};
-
         for (int i = 0; i < shapes.length; i++) {
             System.out.println(shapes[i].area());
         }
 
 
 
-
-
-        System.out.println("\n--- Старт транспорта ---");
         Vehicle v1 = new Car();
         Vehicle v2 = new Bike();
         v1.start();
         v2.start();
 
-        System.out.println("\n--- Зарплаты сотрудников ---");
+
+
         Employee[] employees = {
             new Manager(50000),
             new Developer(160, 250)
         };
         for (int i = 0; i < employees.length; i++) {
-            System.out.println("Зарплата: " + employees[i].calculateSalary());
+            System.out.println(employees[i].calculateSalary());
         }
 
 
 
-        System.out.println("\n--- Бытовая техника ---");
         Appliance[] appliances = {
             new WashingMachine(),
             new Refrigerator()
@@ -227,11 +218,11 @@ static class Vehicle {
             appliances[i].turnOn();
         }
 
-        System.out.println("\n--- Публикации ---");
+
         Publication[] publications = {
-            new Book("Война и мир", "Лев Толстой"),
-            new Magazine("Наука и жизнь", "Октябрь 2025"),
-            new Newspaper("Известия", "13.10.2025")
+            new Book("бук", "аутор"),
+            new Magazine("магазин", "2077"),
+            new Newspaper("газета", "2077")
         };
         for (int i = 0; i < publications.length; i++) {
             publications[i].printDetails();
